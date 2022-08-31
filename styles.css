@@ -1,0 +1,183 @@
+@font-face {
+    font-family: CursedTimer;
+     src: url('CursedTimerUlil-Aznm.ttf');
+}
+
+@font-face {
+    font-family: consolas;
+    src: url('CONSOLA.TTF');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 326px;
+    background-color: lightslategrey;
+}
+
+.calculator-body {
+    position: relative;
+    background: linear-gradient(111deg, #302d2d, #121111);
+    box-shadow: inset -10px 0 10px rgb(0 0 0 / 25%), inset 0 -10px 10px rgb(0 0 0 / 65%), 0 0 2px rgb(0 0 0 / 50%), 10px 10px 20px rgb(0 0 0 / 20%);
+    border: 2px solid rgb(117 117 117 / 95%);
+    height: 572px;
+    width: 385px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    padding: 30px 30px 30px 28px;
+}
+
+.calculator-body::before {
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: 13px;
+    bottom: 20px;
+    right: 18px;
+    background: linear-gradient(166deg, #363636bf, #120f0f);
+    border-radius: 12px;
+    box-shadow: -5px -10px 20px rgb(99 99 99 / 67%), inset 8px 8px 30px 0px #545454;
+    border-left: 1px solid #646464;
+    border-right: 1px solid #494949;
+    border-top: 1px solid #696969;
+}
+
+.calculator-display {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    width: 326px;
+    height: 80px;
+    background-color: #777777;
+    border: 1px solid #373737;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.calculator-display::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    right: 6px;
+    bottom: 4px;
+    border-radius: 6px;
+    box-shadow: inset 4px 0 10px rgba(0, 0, 0, 0.6),
+    inset 0 4px 10px rgba(0, 0, 0, 0.6),
+    0 0 0 2px rgba(0, 0, 0, 0.8),
+    10px 10px 10px rgba(75, 75, 75, 0.5);
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 12px repeat(4, 1fr);
+    grid-gap: 2px;
+    width: 100%;
+    z-index: 6;
+}
+
+.calculator-button {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    padding: 4px 15px 40px;
+    text-align: start;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #282828, #202020);
+    box-shadow: inset -8px 0 8px rgb(0 0 0 / 25%), inset 0 -8px 10px rgb(0 0 0 / 25%), 1px 1px 6px 3px rgb(0 0 0 / 75%), 0px 10px 30px rgb(0 0 0 / 10%);
+    color: white;
+    border: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .1s;
+    font-family: consolas;
+    font-size: 1.3em;
+    z-index: 1;
+}
+
+.calculator-button::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    bottom: 14px;
+    right: 12px;
+    background: linear-gradient(90deg, #232323, #4a4a4a);
+    border-radius: 10px;
+    box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.25);
+    border-left: 1px solid #000400;
+    border-right: 1px solid #000500;
+    border-top: 1px solid #000900;
+    transition: .1s;
+    z-index: -1;
+
+}
+
+.calculator-button:active {
+    padding-top: 12px;
+    background: linear-gradient(180deg, #232323, #1f1f1f);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+    inset 0 -8px 8px rgba(0, 0, 0, 0.25),
+    0 0 0 2px rgba(0, 0, 0, .6),
+    10px 20px 25px rgba(0, 0, 0, 0.50);
+    transition: .1s;
+}
+
+.calculator-button:active::before {
+    position: absolute;
+    bottom: 7px;
+    right: 8px;
+    background: linear-gradient(90deg, #232323, #4a4a4a);
+    box-shadow: -10px -10px 10px rgba(100, 100, 100, 0.25);
+    transition: .1s;
+}
+
+
+.calculator-space {
+    grid-column: span 4;
+}
+
+.button-clear {
+    grid-column: span 2;
+    width: 162px;
+}
+
+.calculator-display {
+    grid-column: span 4;
+}
+
+.button-zero {
+    width: 162px;
+    grid-column: span 2;
+}
+
+.display-area {
+    font-family: CursedTimer, sans-serif;
+    letter-spacing: -0.06em;
+    margin: 4px 10px 1px;
+    font-size: 4em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+    direction: ltr;
+}
+
+.text-all-unchecked {
+    color: #555555;
+}
