@@ -27,11 +27,11 @@ body {
 .calculator-body {
     position: relative;
     background: linear-gradient(111deg, #302d2d, #121111);
-    box-shadow: inset -10px 0 10px rgb(0 0 0 / 25%), inset 0 -10px 10px rgb(0 0 0 / 65%), 0 0 2px rgb(0 0 0 / 50%), 10px 10px 20px rgb(0 0 0 / 20%);
-    border: 2px solid rgb(117 117 117 / 95%);
+    box-shadow: inset -10px 0 10px rgb(5 5 5 / 25%), inset 0 -10px 10px rgb(0 0 0 / 65%), 0 0 2px rgb(0 0 0 / 50%), 10px 10px 20px rgb(0 0 0 / 20%);
+    border: 2px solid rgb(72 72 72 / 95%);
     height: 572px;
     width: 385px;
-    border-radius: 16px;
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
@@ -44,14 +44,14 @@ body {
 .calculator-body::before {
     content: '';
     position: absolute;
-    top: 11px;
-    left: 13px;
+    top: 9px;
+    left: 11px;
     bottom: 20px;
     right: 18px;
     background: linear-gradient(166deg, #363636bf, #120f0f);
-    border-radius: 12px;
-    box-shadow: -5px -10px 20px rgb(99 99 99 / 67%), inset 8px 8px 30px 0px #545454;
-    border-left: 1px solid #646464;
+    border-radius: 18px;
+    box-shadow: -5px -10px 20px rgb(115 109 109 / 67%), inset 8px 8px 30px 0px #545454;
+    border-left: 1px solid #595656;
     border-right: 1px solid #494949;
     border-top: 1px solid #696969;
 }
